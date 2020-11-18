@@ -40,6 +40,5 @@ public class FlavourController {
     public void updateFlavour(@RequestBody Flavour flavour, @PathVariable int id) {
         this.flavourService.updateFlavour(flavour, id);
         System.out.println("Flavour with id " + id + " updated");
-
     }
 }

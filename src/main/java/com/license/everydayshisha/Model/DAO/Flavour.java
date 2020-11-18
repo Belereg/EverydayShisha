@@ -3,7 +3,7 @@ package com.license.everydayshisha.Model.DAO;
 import javax.persistence.*;
 
 @Entity
-@Table (name = "flavours")
+@Table(name = "flavours")
 public class Flavour {
 
     @Id

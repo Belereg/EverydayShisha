@@ -1,15 +1,13 @@
 package com.license.everydayshisha.Model.DAO;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name = "shisha")
+@Table(name = "shishas")
 public class Shisha {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idShisha")
     private int idShisha;
 
@@ -22,6 +20,13 @@ public class Shisha {
     @Column(name = "hoseCount")
     private int hoseCount;
 
+    public Shisha() {
+        this.idShisha = 0;
+        this.shishaName = "shishaName";
+        this.size = 0;
+        this.hoseCount = 0;
+    }
+
     public Shisha(int idShisha, String shishaName, int size, int hoseCount) {
         this.idShisha = idShisha;
         this.shishaName = shishaName;
@@ -29,12 +34,6 @@ public class Shisha {
         this.hoseCount = hoseCount;
     }
 
-    public Shisha() {
-        this.idShisha = 0;
-        this.shishaName = "shishaName";
-        this.size = 0;
-        this.hoseCount = 0;
-    }
     public int getIdShisha() {
         return idShisha;
     }
@@ -46,7 +45,6 @@ public class Shisha {
     public String getShishaName() {
         return shishaName;
     }
-
     public void setShishaName(String shishaName) {
         this.shishaName = shishaName;
     }
