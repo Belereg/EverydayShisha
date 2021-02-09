@@ -15,6 +15,5 @@ public class EverydayshishaApplication {
     public static void main(String[] args) {
         SpringApplication.run(EverydayshishaApplication.class, args);
         System.out.println("!!! APPLICATION STARTED !!!");
-
     }
 }

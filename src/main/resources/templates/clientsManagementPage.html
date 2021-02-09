@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Client Management</title>
+</head>
+<body>
+
+<a href="/admin">Go back to admin page</a>
+<div align="center">
+    <h1>Clients List</h1>
+    <a href="/clients/addClientPage">Add New Client</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Client ID</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>CNP</th>
+            <th>Address</th>
+            <th>PhoneNumber</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="client : ${clients}">
+            <td th:text="${client.idCLient}">Client ID</td>
+            <td th:text="${client.firstName}">First Name</td>
+            <td th:text="${client.lastName}">Last Name</td>
+            <td th:text="${client.CNP}">CNP</td>
+            <td th:text="${client.address}">Address</td>
+            <td th:text="${client.phoneNumber}">Phone Number</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

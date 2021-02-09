@@ -13,10 +13,14 @@ public class ClientService {
     @Autowired
     private ClientRepository clientRepository;
 
-    public Client addClient(Client client) {
-       return this.clientRepository.save(client);
-    }
+//    public Client addClient(Client client) {
+//       return this.clientRepository.save(client);
+//    }
 
+    public void addClient(Client client) {
+        clientRepository.save(client);
+    }
+    
     public Client getClient(int id) {
         return this.clientRepository.findById(id).get();
     }
