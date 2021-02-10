@@ -13,10 +13,6 @@ public class ClientService {
     @Autowired
     private ClientRepository clientRepository;
 
-//    public Client addClient(Client client) {
-//       return this.clientRepository.save(client);
-//    }
-
     public void addClient(Client client) {
         clientRepository.save(client);
     }
@@ -32,18 +28,18 @@ public class ClientService {
     public void deleteClient(int id){
         this.clientRepository.deleteById(id);
     }
-
-    public void updateClient(Client client, int id){
-        Client updatedClient = this.clientRepository.findById(id).get();
-
-        updatedClient.setAddress(client.getAddress());
-        updatedClient.setCNP(client.getCNP());
-        updatedClient.setFirstName(client.getFirstName());
-        updatedClient.setLastName(client.getLastName());
-        updatedClient.setPhoneNumber(client.getPhoneNumber());
-
-        clientRepository.save(updatedClient);
-    }
+//
+//    public void updateClient(Client client, int id){
+//        Client updatedClient = this.clientRepository.findById(id).get();
+//
+//        updatedClient.setAddress(client.getAddress());
+//        updatedClient.setCNP(client.getCNP());
+//        updatedClient.setFirstName(client.getFirstName());
+//        updatedClient.setLastName(client.getLastName());
+//        updatedClient.setPhoneNumber(client.getPhoneNumber());
+//
+//        clientRepository.save(updatedClient);
+//    }
 }
 
 

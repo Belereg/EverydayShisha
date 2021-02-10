@@ -21,6 +21,7 @@
             <th>CNP</th>
             <th>Address</th>
             <th>PhoneNumber</th>
+            <th>Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -31,6 +32,11 @@
             <td th:text="${client.CNP}">CNP</td>
             <td th:text="${client.address}">Address</td>
             <td th:text="${client.phoneNumber}">Phone Number</td>
+            <td>
+                <a th:href="@{'/clients/updateClient/' + ${client.idCLient}}">Edit</a>
+                &nbsp;&nbsp;&nbsp;
+                <a th:href="@{'/clients/deleteClient/' + ${client.idCLient}}">Delete</a>
+            </td>
         </tr>
         </tbody>
     </table>

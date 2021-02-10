@@ -3,15 +3,18 @@
       lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Add a client </title>
+    <title>Update a client </title>
 </head>
 <body>
-<a href="/clients/clientsManagement">Go back to clients management page</a>
 <div align="center">
-    <h1>Add a client below</h1>
+    <h1>Update the client's information below</h1>
     <br/>
     <form action="#" th:action="@{/clients/addClient}" th:object="${client}" method="post">
         <table border="0" cellpadding="10">
+            <tr>
+                <td>Client's Id:</td>
+                <td><input type="text" th:field="*{idCLient}" readonly="readonly"/></td>
+            </tr>
             <tr>
                 <td>Client's first name:</td>
                 <td><input type="text" th:field="*{firstName}"/></td>
@@ -31,7 +34,7 @@
                 <td><input type="text" th:field="*{phoneNumber}"/></td>
             </tr>
             <tr>
-                <td colspan="2"><button type="submit">Add client</button></td>
+                <td colspan="2"><button type="submit">Update client</button></td>
             </tr>
         </table>
     </form>
