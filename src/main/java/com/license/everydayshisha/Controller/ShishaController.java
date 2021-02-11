@@ -1,11 +1,14 @@
 package com.license.everydayshisha.Controller;
 
+import com.license.everydayshisha.Model.DAO.Flavour;
 import com.license.everydayshisha.Model.DAO.Shisha;
 import com.license.everydayshisha.Repository.ShishaRepository;
 import com.license.everydayshisha.Service.ShishaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -16,31 +19,39 @@ public class ShishaController {
     @Autowired
     private ShishaService shishaService;
 
-    @PostMapping("/addShisha")
-    public Shisha addShisha(@RequestBody Shisha shisha) {
-        return this.shishaService.addShisha(shisha);
+    //content on the page
+    @RequestMapping("/saveShishaPage")
+    public String showSaveShisha(Model model) {
+        Shisha shisha = new Shisha();
+        model.addAttribute("shisha", shisha);
+        return "saveShishaPage";
     }
 
-    @GetMapping("/getShisha/{id}")
-    public Shisha getShisha(@PathVariable int id) {
-        return this.shishaService.getShisha(id);
+    //the redirect after pressing save shisha
+    @RequestMapping(value = "/saveShisha", method = RequestMethod.POST)
+    public String saveShisha(@ModelAttribute("shisha") Shisha shisha){
+        this.shishaService.saveShisha(shisha);
+        return "redirect:/shishas/shishasManagement";
     }
 
-    @GetMapping("/getAllShishas")
-    public List<Shisha> getAllShishas() {
-        return this.shishaService.getAllShishas();
+    @RequestMapping("/shishasManagement")
+    public String getAllFlavours(Model model) {
+        List<Shisha> shishas = shishaService.getAllShishas();
+        model.addAttribute("shishas", shishas);
+        return "shishasManagementPage";
     }
 
-    @DeleteMapping("/deleteShisha/{id}")
-    public void deleteShisha(@PathVariable int id) {
+    @RequestMapping("/deleteShisha/{id}")
+    public String deleteFlavour(@PathVariable(name = "id") int id) {
         this.shishaService.deleteShisha(id);
-        System.out.println("Shisha with id " + id + " deleted");
+        return "redirect:/shishas/shishasManagement";
     }
 
-    @PutMapping("/updateShisha/{id}")
-    public void updateShisha(@RequestBody Shisha shisha, @PathVariable int id) {
-        this.shishaService.updateShisha(shisha, id);
-        System.out.println("Shisha with id " + id + " updated");
-
+    @RequestMapping("/updateShisha/{id}")
+    public ModelAndView updateShishas(@PathVariable(name = "id") int id) {
+        ModelAndView modelAndView = new ModelAndView("updateShishaPage");
+        Shisha shishas = shishaService.getShisha(id);
+        modelAndView.addObject(shishas);
+        return modelAndView;
     }
 }
