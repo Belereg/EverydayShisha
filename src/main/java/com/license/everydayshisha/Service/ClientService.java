@@ -5,6 +5,9 @@ import com.license.everydayshisha.Repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -22,7 +25,9 @@ public class ClientService {
     }
 
     public List<Client> getAllClients() {
-        return this.clientRepository.findAll();
+        List<Client> clientList = this.clientRepository.findAll();
+        clientList.sort(new sortById());
+        return clientList;
     }
 
     public void deleteClient(int id){
@@ -40,6 +45,14 @@ public class ClientService {
 //
 //        clientRepository.save(updatedClient);
 //    }
+}
+
+class sortById implements Comparator<Client>
+{
+    public int compare(Client a, Client b)
+    {
+        return a.getIdCLient() - b.getIdCLient();
+    }
 }
 
 

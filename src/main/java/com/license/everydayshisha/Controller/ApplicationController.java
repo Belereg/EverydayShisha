@@ -14,19 +14,27 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/")
-public class MainpageController {
+public class ApplicationController {
 
     //@Autowired
     //private ClientService clientService; aici o sa vina in loc la asta, service-ul mainpage-ului
     @Autowired
     private ClientService clientService;
 
-    @RequestMapping("/admin")
+    @RequestMapping("/")
     public String viewHomePage(Model model){
+        List<Client> listClients = clientService.getAllClients();
+        model.addAttribute("listClients", listClients);
+        return "homePage";
+    }
+
+    @RequestMapping("/admin")
+    public String viewAdminPage(Model model){
         List<Client> listClients = clientService.getAllClients();
         model.addAttribute("listClients", listClients);
         return "adminPage";
     }
+
 //
 //    //test
 //    @GetMapping("/getPage")
