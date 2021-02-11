@@ -18,17 +18,17 @@ public class ClientController {
     private ClientService clientService;
 
     //content on the page
-    @RequestMapping("/addClientPage")
-    public String showAddClient(Model model) {
+    @RequestMapping("/saveClientPage")
+    public String showSaveClient(Model model) {
         Client client = new Client();
         model.addAttribute("client", client);
-        return "addClientPage";
+        return "saveClientPage";
     }
 
-    //the redirect after pressing add client
-    @RequestMapping(value = "/addClient", method = RequestMethod.POST)
-    public String addClient(@ModelAttribute("client") Client client){
-        this.clientService.addClient(client);
+    //the redirect after pressing save client
+    @RequestMapping(value = "/saveClient", method = RequestMethod.POST)
+    public String saveClient(@ModelAttribute("client") Client client){
+        this.clientService.saveClient(client);
         return "redirect:/clients/clientsManagement";
     }
 

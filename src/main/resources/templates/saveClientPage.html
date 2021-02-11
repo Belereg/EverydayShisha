@@ -10,7 +10,7 @@
 <div align="center">
     <h1>Add a client below</h1>
     <br/>
-    <form action="#" th:action="@{/clients/addClient}" th:object="${client}" method="post">
+    <form action="#" th:action="@{/clients/saveClient}" th:object="${client}" method="post">
         <table border="0" cellpadding="10">
             <tr>
                 <td>Client's first name:</td>
@@ -31,7 +31,7 @@
                 <td><input type="text" th:field="*{phoneNumber}"/></td>
             </tr>
             <tr>
-                <td colspan="2"><button type="submit">Add client</button></td>
+                <td colspan="2"><button type="submit">Save client</button></td>
             </tr>
         </table>
     </form>

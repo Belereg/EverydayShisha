@@ -1,10 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8"/>
   <title>Flavours Management</title>
 </head>
 <body>
 
+<a href="/admin">Go back to admin page</a>
+<div align="center">
+  <h1>Flavours List</h1>
+  <a href="/flavours/saveFlavourPage">Add New Flavour</a>
+  <br/><br/>
+  <table border="1" cellpadding="10">
+    <thead>
+    <tr>
+      <th>Flavour ID</th>
+      <th>Flavour Name</th>
+      <th>Amount</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="flavour : ${flavours}">
+      <td th:text="${flavour.idFlavour}">Flavour Id</td>
+      <td th:text="${flavour.flavourName}">Flavour name</td>
+      <td th:text="${flavour.amount}">Amount</td>
+
+      <td>
+        <a th:href="@{'/flavours/updateFlavour/' + ${flavour.idFlavour}}">Edit</a>
+        &nbsp;&nbsp;&nbsp;
+        <a th:href="@{'/flavours/deleteFlavour/' + ${flavour.idFlavour}}">Delete</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
 </body>
 </html>

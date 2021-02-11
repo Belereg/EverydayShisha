@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a flavour </title>
+</head>
+<body>
+<a href="/flavours/flavoursManagement">Go back to flavours management page</a>
+<div align="center">
+    <h1>Add a flavour below</h1>
+    <br/>
+    <form action="#" th:action="@{/flavours/saveFlavour}" th:object="${flavour}" method="post">
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>Flavour's name:</td>
+                <td><input type="text" th:field="*{flavourName}"/></td>
+            </tr>
+            <tr>
+                <td>Flavour amount: </td>
+                <td><input type="text" th:field="*{amount}"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Save flavour</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

@@ -16,7 +16,7 @@ public class ClientService {
     @Autowired
     private ClientRepository clientRepository;
 
-    public void addClient(Client client) {
+    public void saveClient(Client client) {
         clientRepository.save(client);
     }
     
@@ -26,7 +26,7 @@ public class ClientService {
 
     public List<Client> getAllClients() {
         List<Client> clientList = this.clientRepository.findAll();
-        clientList.sort(new sortById());
+        clientList.sort(new sortByClientId());
         return clientList;
     }
 
@@ -47,7 +47,7 @@ public class ClientService {
 //    }
 }
 
-class sortById implements Comparator<Client>
+class sortByClientId implements Comparator<Client>
 {
     public int compare(Client a, Client b)
     {
