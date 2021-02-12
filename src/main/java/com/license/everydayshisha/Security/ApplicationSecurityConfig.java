@@ -35,26 +35,27 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
         return NoOpPasswordEncoder.getInstance();
     }
 
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-                .csrf().disable();
-
-    }
-
-//  PENTRU CAND O SA VREAU SA FAC TREABA CU SPRING SECURIY
-//    @Override
 //    protected void configure(HttpSecurity http) throws Exception {
-//        http.authorizeRequests()
-//                //.antMatchers("/*").hasAnyRole("ADMIN","USER")
-//                //.antMatchers("/clients/*").permitAll()
-//                .antMatchers("/clients/*").hasAnyRole("ADMIN","USER")
-//                .antMatchers("/admin").hasRole("ADMIN")
-//                .antMatchers("/user").hasAnyRole("USER", "ADMIN")
-//                //.antMatchers("/clients/**").hasAnyRole("USER","ADMIN")
-//                .and().formLogin()
-//                .and()
-//                .httpBasic();
+//        http
+//                .csrf().disable();
+//
 //    }
+
+  //PENTRU CAND O SA VREAU SA FAC TREABA CU SPRING SECURIY
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+                //.antMatchers("/*").hasAnyRole("ADMIN","USER")
+                //.antMatchers("/clients/*").permitAll()
+                .antMatchers("/admin").hasRole("ADMIN")
+                .antMatchers("/clients/*").hasAnyRole("ADMIN")
+                .antMatchers("/flavours/*").hasAnyRole("ADMIN")
+                .antMatchers("/shishas/*").hasAnyRole("ADMIN")
+                //.antMatchers("/clients/**").hasAnyRole("USER","ADMIN")
+                .and().formLogin()
+                .and()
+                .httpBasic();
+    }
 
 
 }
