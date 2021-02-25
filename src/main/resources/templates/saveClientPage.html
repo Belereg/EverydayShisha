@@ -14,21 +14,28 @@
         <table border="0" cellpadding="10">
             <tr>
                 <td>Client's first name:</td>
-                <td><input type="text" th:field="*{firstName}"/></td>
+                <td><input type="text" th:field="*{firstName}" placeholder="first name"/></td>
+                <td th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="item fieldinvalid">firstName error</td>
             </tr>
             <tr>
-                <td>Client's lirst name:</td>
+                <td>Client's last name:</td>
                 <td><input type="text" th:field="*{lastName}"/></td>
+                <td th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="">lastName error</td>
             </tr>
             <td>Client's CNP:</td>
             <td><input type="text" th:field="*{CNP}"/></td>
+            <td th:if="${#fields.hasErrors('CNP')}" th:errors="*{CNP}" class="">CNP error</td>
+
             <tr>
                 <td>Client's address:</td>
                 <td><input type="text" th:field="*{address}"/></td>
+                <td th:if="${#fields.hasErrors('address')}" th:errors="*{address}" class="">address error</td>
             </tr>
             <tr>
                 <td>Client's phone number:</td>
                 <td><input type="text" th:field="*{phoneNumber}"/></td>
+                <td th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}" class="">phoneNumber error</td>
+
             </tr>
             <tr>
                 <td colspan="2"><button type="submit">Save client</button></td>

@@ -1,6 +1,9 @@
 package com.license.everydayshisha.Model.DAO;
 
+import org.hibernate.validator.constraints.Range;
+
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 @Entity
 @Table(name = "flavours")
@@ -11,9 +14,15 @@ public class Flavour {
     @Column(name = "idFlavour")
     private int idFlavour;
 
+    @NotBlank
+    @Size(min = 2, message = "Flavour Name must have at least 2 characters")
+    @Pattern(regexp = "[a-zA-Z \\p{Punct}]+", message = "Flavour name can only contain letters")
     @Column(name = "flavourName")
     private String flavourName;
 
+    @NotNull
+    @Range(max = 100000, message = "You cannot hold more than 100kg of one flavour")
+    @PositiveOrZero(message = "The size cannot negative")
     @Column(name = "amount")
     private int amount; //cantitatea in grame al aromei
 

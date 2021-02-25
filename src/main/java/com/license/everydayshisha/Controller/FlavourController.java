@@ -5,9 +5,11 @@ import com.license.everydayshisha.Service.FlavourService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -27,7 +29,12 @@ public class FlavourController {
 
     //the redirect after pressing save flavour
     @RequestMapping(value = "/saveFlavour", method = RequestMethod.POST)
-    public String saveFlavour(@ModelAttribute("flavour") Flavour flavour){
+    public String saveFlavour(@Valid @ModelAttribute("flavour") Flavour flavour, BindingResult bindingResult){
+
+        if (bindingResult.hasErrors())
+        {
+            return "saveFlavourPage";
+        }
         this.flavourService.saveFlavour(flavour);
         return "redirect:/flavours/flavoursManagement";
     }

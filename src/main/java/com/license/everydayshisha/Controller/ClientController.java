@@ -5,9 +5,12 @@ import com.license.everydayshisha.Service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -27,7 +30,16 @@ public class ClientController {
 
     //the redirect after pressing save client
     @RequestMapping(value = "/saveClient", method = RequestMethod.POST)
-    public String saveClient(@ModelAttribute("client") Client client){
+    public String saveClient(@Valid @ModelAttribute("client") Client client, BindingResult bindingResult){
+
+
+//        bindingResult.addError(new FieldError("client", "firstName","Minimum length is 2"));
+//        bindingResult.addError(new FieldError("client", "lastName","Minimum length is 2"));
+//        bindingResult.addError(new FieldError("client", "address","Minimum length is 2"));
+        if (bindingResult.hasErrors())
+        {
+            return "saveClientPage";
+        }
         this.clientService.saveClient(client);
         return "redirect:/clients/clientsManagement";
     }

@@ -1,6 +1,9 @@
 package com.license.everydayshisha.Model.DAO;
 
+import org.hibernate.validator.constraints.Range;
+
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 @Entity
 @Table(name = "shishas")
@@ -11,12 +14,21 @@ public class Shisha {
     @Column(name = "idShisha")
     private int idShisha;
 
+    @NotBlank
+    @Size(min = 2, message = "Shisha name must have at least 2 characters")
+    @Pattern(regexp = "[a-zA-Z \\p{Punct}]+", message = "Shisha name can only contain letters")
     @Column(name = "shishaName")
     private String shishaName;
 
+    @NotNull
+    @Range(min = 20, max = 250, message = "The size of the shisha must be between 20 and 250")
+    @PositiveOrZero(message = "The size cannot be 0 or negative")
     @Column(name = "size")
     private int size;
 
+    @NotNull
+    @Range(max = 10, message = "The hoses count of the shisha must be between 1 and 10")
+    @Positive(message = "The hoses count cannot be 0 or negative")
     @Column(name = "hoseCount")
     private int hoseCount;
 

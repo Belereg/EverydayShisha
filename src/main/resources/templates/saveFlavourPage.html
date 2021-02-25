@@ -15,10 +15,12 @@
             <tr>
                 <td>Flavour's name:</td>
                 <td><input type="text" th:field="*{flavourName}"/></td>
+                <td th:if="${#fields.hasErrors('flavourName')}" th:errors="*{flavourName}" class="">flavourName error</td>
             </tr>
             <tr>
                 <td>Flavour amount: </td>
                 <td><input type="text" th:field="*{amount}"/></td>
+                <td th:if="${#fields.hasErrors('amount')}" th:errors="*{amount}" class="">amount error</td>
             </tr>
             <tr>
                 <td colspan="2"><button type="submit">Save flavour</button></td>

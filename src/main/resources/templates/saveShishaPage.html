@@ -15,14 +15,17 @@
             <tr>
                 <td>Shisha's name:</td>
                 <td><input type="text" th:field="*{shishaName}"/></td>
+                <td th:if="${#fields.hasErrors('shishaName')}" th:errors="*{shishaName}" class="">shishaName error</td>
             </tr>
             <tr>
                 <td>Shisha's size </td>
                 <td><input type="text" th:field="*{size}"/></td>
+                <td th:if="${#fields.hasErrors('size')}" th:errors="*{size}" class="">size error</td>
             </tr>
             <tr>
                 <td>Shisha's hose count </td>
                 <td><input type="text" th:field="*{hoseCount}"/></td>
+                <td th:if="${#fields.hasErrors('hoseCount')}" th:errors="*{hoseCount}" class="">hoseCount error</td>
             </tr>
             <tr>
                 <td colspan="2"><button type="submit">Save shisha</button></td>
