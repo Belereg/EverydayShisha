@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Clients Management</title>
+</head>
+<body>
+
+<a href="/admin">Go back to admin page</a>
+<div align="center">
+    <h1>Clients List</h1>
+    <a href="/clients/saveClientPage">Add New Client</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Client ID</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>CNP</th>
+            <th>Address</th>
+            <th>PhoneNumber</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="client : ${listClients}">
+            <td th:text="${client.idCLient}">Client ID</td>
+            <td th:text="${client.firstName}">First Name</td>
+            <td th:text="${client.lastName}">Last Name</td>
+            <td th:text="${client.CNP}">CNP</td>
+            <td th:text="${client.address}">Address</td>
+            <td th:text="${client.phoneNumber}">Phone Number</td>
+            <td>
+                <a th:href="@{'/clients/updateClient/' + ${client.idCLient}}">Edit</a>
+                &nbsp;&nbsp;&nbsp;
+                <a th:href="@{'/clients/deleteClient/' + ${client.idCLient}}">Delete</a>
+            </td>
+        </tr>
+
+<!--        <tr th:each="shisha : ${listShishas}">-->
+<!--            <td th:text="${shisha.hoseCount}">Hose count</td>-->
+<!--            <td th:text="${shisha.size}">Shisha size</td>-->
+<!--            <td th:text="${shisha.shishaName}">Shisha Name</td>-->
+<!--            <td th:text="${shisha.idShisha}">Shisha's Id</td>-->
+<!--            <td>-->
+<!--                <a th:href="@{'/shishas/updateShisha/' + ${shisha.idShisha}}">Edit</a>-->
+<!--                &nbsp;&nbsp;&nbsp;-->
+<!--                <a th:href="@{'/shishas/deleteShisha/' + ${shisha.idShisha}}">Delete</a>-->
+<!--            </td>-->
+<!--        </tr>-->
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
