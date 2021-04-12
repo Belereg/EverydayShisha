@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Galerie</title>
     <script src="https://kit.fontawesome.com/08626bfbba.js" crossorigin="anonymous"></script>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
@@ -32,16 +32,14 @@
                     <h1 class="brand"><a href="#">Everyday</a></h1>
                     <br>
                     <h1 class="brand2"><a href="#"><span>Shisha</span></a></h1>
-
                 </div>
 
                 <ul>
                     <li><a href="/">Acasa</a></li>
                     <li><a href="/offers">Oferte</a></li>
+                    <li><a href="/gallery">Galerie</a></li>
                     <li><a href="/about">Despre</a></li>
                     <li><a href="/contact">Contact</a></li>
-                    <li><a href="/gallery">Galerie</a></li>
-
                 </ul>
             </nav>
         </div>
@@ -58,73 +56,130 @@
         <p>Comanda acum si venim in maxim 60 de minute!</p>
         <a href="#">Inchiriaza</a>
     </div>
-
 </div>
 
-
-<div class="container-fluid px-sm-1 py-5 mx-auto">
+<div id="hide_products" class="container-fluid px-sm-1 py-5 mx-auto">
     <div class="row justify-content-center">
-        <div class="d-flex margins">
-            <div class="card">
+        <div class="d-flex">
+            <div id="firstOne" class="card mr-2">
                 <div class="d-flex flex-column thumbnails">
-                    <div id="f1" class="tb tb-active"> <img class="thumbnail-img fit-image"
-                                                            src="https://i.imgur.com/wL1uRBk.jpg"> </div>
-                    <div id="f2" class="tb"> <img class="thumbnail-img fit-image"
-                                                  src="https://i.imgur.com/3NusNP2.jpg"> </div>
-                    <div id="f3" class="tb"> <img class="thumbnail-img fit-image"
-                                                  src="https://i.imgur.com/pXUPOVR.jpg"> </div>
-                    <div id="f4" class="tb"> <img class="thumbnail-img fit-image"
-                                                  src="https://i.imgur.com/xX5Qmsa.jpg"> </div>
+                    <div id="g1" class="tb tb-active">
+                        <img class="thumbnail-img fit-image" src=""/>
+                    </div>
+                    <div id="g2" class="tb">
+                        <img class="thumbnail-img fit-image" src=""/>
+                    </div>
+                    <div id="g3" class="tb">
+                        <img class="thumbnail-img fit-image" src=""/>
+                    </div>
+                    <div id="g4" class="tb">
+                        <img class="thumbnail-img fit-image" src=""/>
+                    </div>
+                </div>
+                <fieldset id="g11" class="active">
+                    <div class="product-pic">
+                        <img class="pic0" src=""/>
+                    </div>
+                </fieldset>
+                <fieldset id="g21" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src=""/>
+                    </div>
+                </fieldset>
+                <fieldset id="g31" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src=""/>
+                    </div>
+                </fieldset>
+                <fieldset id="g41" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src=""/>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div id="secondOne" class="card mr-2">
+                <div class="d-flex flex-column thumbnails">
+                    <div id="f1" class="tb tb-active">
+                        <img class="thumbnail-img fit-image" src=""/>
+                    </div>
+                    <div id="f2" class="tb">
+                        <img class="thumbnail-img fit-image" src=""/>
+                    </div>
+                    <div id="f3" class="tb">
+                        <img class="thumbnail-img fit-image" src=""/>
+                    </div>
+                    <div id="f4" class="tb">
+                        <img class="thumbnail-img fit-image" src=""/>
+                    </div>
                 </div>
                 <fieldset id="f11" class="active">
-                    <div class="product-pic"> <img class="pic0" src="https://i.imgur.com/wL1uRBk.jpg"> </div>
+                    <div class="product-pic">
+                        <img class="pic0" src=""/>
+                    </div>
                 </fieldset>
                 <fieldset id="f21" class="">
-                    <div class="product-pic"> <img class="pic0" src="https://i.imgur.com/3NusNP2.jpg"> </div>
+                    <div class="product-pic">
+                        <img class="pic0" src=""/>
+                    </div>
                 </fieldset>
                 <fieldset id="f31" class="">
-                    <div class="product-pic"> <img class="pic0" src="https://i.imgur.com/pXUPOVR.jpg"> </div>
+                    <div class="product-pic">
+                        <img class="pic0" src=""/>
+                    </div>
                 </fieldset>
                 <fieldset id="f41" class="">
-                    <div class="product-pic"> <img class="pic0" src="https://i.imgur.com/xX5Qmsa.jpg"> </div>
+                    <div class="product-pic">
+                        <img class="pic0" src=""/>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div id="thirdOne" class="card mr-2">
+                <div class="d-flex flex-column thumbnails">
+                    <div id="h1" class="tb tb-active">
+                        <img class="thumbnail-img fit-image" src=""/>
+                    </div>
+                    <div id="h2" class="tb">
+                        <img class="thumbnail-img fit-image" src=""/>
+                    </div>
+                    <div id="h3" class="tb">
+                        <img class="thumbnail-img fit-image" src=""/>
+                    </div>
+                    <div id="h4" class="tb">
+                        <img class="thumbnail-img fit-image" src=""/>
+                    </div>
+                </div>
+                <fieldset id="h11" class="active">
+                    <div class="product-pic">
+                        <img class="pic0" src=""/>
+                    </div>
+                </fieldset>
+                <fieldset id="h21" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src=""/>
+                    </div>
+                </fieldset>
+                <fieldset id="h31" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src=""/>
+                    </div>
+                </fieldset>
+                <fieldset id="h41" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src=""/>
+                    </div>
                 </fieldset>
             </div>
         </div>
     </div>
 </div>
 
-
-<script type='text/javascript'>$(document).ready(function () {
-
-    $(".tb").hover(function () {
-
-        $(".tb").removeClass("tb-active");
-        $(this).addClass("tb-active");
-
-        current_fs = $(".active");
-
-        next_fs = $(this).attr('id');
-        next_fs = "#" + next_fs + "1";
-
-        $("fieldset").removeClass("active");
-        $(next_fs).addClass("active");
-
-        current_fs.animate({}, {
-            step: function () {
-                current_fs.css({
-                    'display': 'none',
-                    'position': 'relative'
-                });
-                next_fs.css({
-                    'display': 'block'
-                });
-            }
-        });
-    });
-
-});</script>
-
-<script src="/js/hamburgerToggle.js"></script>
+<script src="/js/products.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>

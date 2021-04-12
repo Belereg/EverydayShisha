@@ -10,6 +10,35 @@ video {
     opacity: 1;
     z-index: -20000;
 }
+h2.featurette-heading{
+    margin-top:7rem;
+}
+
+body {
+    padding-bottom: 3rem;
+}
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.marketing h2 {
+    font-weight: 400;
+}
+.marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+
+.featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+}
 
 * {
     margin: 0;
@@ -24,7 +53,9 @@ video {
     /* position: absolute; */
     right: 0;
     width: 100%;
-    min-height: 90vh;
+    min-height: 70vh;
+    margin-bottom: 20rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -356,14 +387,15 @@ nav ul li a:hover::after {
     }
 
     .showcase {
-        min-height:50vh;
-        margin-bottom: 70vh;
+        margin-bottom: 25rem;
+        /* min-height:50vh; */
+        /* margin-bottom: 70vh; */
     }
 }
 
 @media screen and (max-width: 568px) {
     div .text{
-        margin-top: 0;
+        margin-bottom: 100vw;
     }
     .menu-toggle {
         display: block;
@@ -429,6 +461,7 @@ nav ul li a:hover::after {
     .showcase {
         /* min-width: none; */
         margin-top: 140px;
+        margin-bottom: 0rem;
         /* font-size: small; */
     }
 
@@ -456,3 +489,5 @@ nav ul li a:hover::after {
         margin-top: 1rem;
     }
 }
+
+

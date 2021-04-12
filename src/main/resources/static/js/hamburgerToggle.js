@@ -6,7 +6,7 @@ var hide_facebook = document.getElementById("hide_facebook")
 var hide_snapchat = document.getElementById("hide_snapchat")
 var hide_phone = document.getElementById("hide_phone")
 var hide_whatsapp = document.getElementById("hide_whatsapp")
-var hide_content = document.getElementById("hide_content")
+// var hide_content = document.getElementById("hide_content")
 
 open.addEventListener("click", function(){
 
@@ -29,7 +29,7 @@ open.addEventListener("click", function(){
         hide_snapchat.style.display = "none";
         hide_phone.style.display = "none";
         hide_whatsapp.style.display = "none";
-        hide_content.style.display = "none";
+        // hide_content.style.display = "none";
         changeIcon = false;
     }
     else {
@@ -42,7 +42,7 @@ open.addEventListener("click", function(){
         hide_phone.style.display = "inline-block";
         hide_whatsapp.style.display = "inline-block";
 
-        hide_content.style.display = "inline-block";
+        // hide_content.style.display = "inline-block";
         changeIcon = true;
     }
 });

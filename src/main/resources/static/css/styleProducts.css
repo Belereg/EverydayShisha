@@ -1,8 +1,7 @@
-
 body {
-
+    /*background-color: #FF6C2F;*/
     color: #000;
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 
 .card {
@@ -10,15 +9,15 @@ body {
     padding: 20px;
     border-radius: 15px;
     margin-top: 50px;
-    margin-bottom: 50px
+    margin-bottom: 50px;
 }
 
 fieldset.active {
-    display: block !important
+    display: block !important;
 }
 
 fieldset {
-    display: none
+    display: none;
 }
 
 .pic0 {
@@ -26,45 +25,45 @@ fieldset {
     height: 500px;
     margin-left: 85px;
     margin-right: auto;
-    display: block
+    display: block;
 }
 
 .product-pic {
     padding-left: auto;
     padding-right: auto;
-    width: 100%
+    width: 100%;
 }
 
 .thumbnails {
-    position: absolute
+    position: absolute;
 }
 
 .fit-image {
     width: 100%;
-    object-fit: cover
+    object-fit: cover;
 }
 
 .tb {
-    width: 62px;
-    height: 62px;
+    height: 57px;
+    width: 57px;
     border: 1px solid grey;
     margin: 2px;
     opacity: 0.4;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .tb-active {
-    opacity: 1
+    opacity: 1;
 }
 
 .thumbnail-img {
-    width: 60px;
-    height: 60px
+    width: 55px;
+    height: 55px;
 }
 
 @media screen and (max-width: 768px) {
     .pic0 {
-        width: 250px;
-        height: 350px
+        width: 200px;
+        height: 300px;
     }
 }
