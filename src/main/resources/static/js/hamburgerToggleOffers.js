@@ -2,6 +2,7 @@ var open = document.getElementById('hamburger');
 var changeIcon = true;
 var cacat = document.getElementById("cacat")
 var hide_content = document.getElementById("hide_content")
+var hide_footer = document.getElementById("hide_footer")
 
 open.addEventListener("click", function(){
 
@@ -16,6 +17,7 @@ open.addEventListener("click", function(){
         icon.classList.add("fa-times");
         cacat.style.display = "none";
         hide_content.style.display = "none";
+        hide_footer.style.display = "none";
         changeIcon = false;
     }
     else {
@@ -23,6 +25,7 @@ open.addEventListener("click", function(){
         icon.classList.add("fa-bars");
         cacat.style.display = "flex";
         hide_content.style.display = "inline-block";
+        hide_footer.style.display = "block";
         changeIcon = true;
     }
 });

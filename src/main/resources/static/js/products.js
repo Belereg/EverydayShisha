@@ -14,20 +14,20 @@ $(document).ready(function () {
         $(`div#${divId} fieldset`).removeClass('active');
         $(next_fs).addClass('active');
 
-        current_fs.animate(
-            {},
-            {
-                step: function () {
-                    current_fs.css({
-                        'display': 'none',
-                        'position': 'relative',
-                    });
-                    next_fs.css({
-                        'display': 'block',
-                    });
-                },
-            }
-        );
+        // current_fs.animate(
+        //     {},
+        //     {
+        //         step: function () {
+        //             current_fs.css({
+        //                 'display': 'none',
+        //                 'position': 'relative',
+        //             });
+        //             next_fs.css({
+        //                 'display': 'block',
+        //             });
+        //         },
+        //     }
+        // );
     });
 });
 
@@ -35,6 +35,7 @@ var open = document.getElementById('hamburger');
 var changeIcon = true;
 var cacat = document.getElementById("cacat")
 var hide_products = document.getElementById("hide_products")
+var hide_footer = document.getElementById("hide_footer")
 
 open.addEventListener("click", function(){
 
@@ -49,6 +50,7 @@ open.addEventListener("click", function(){
         icon.classList.add("fa-times");
         cacat.style.display = "none";
         hide_products.style.display = "none";
+        hide_footer.style.display = "none";
         changeIcon = false;
     }
     else {
@@ -56,6 +58,7 @@ open.addEventListener("click", function(){
         icon.classList.add("fa-bars");
         cacat.style.display = "flex";
         hide_products.style.display = "inline-block";
+        hide_footer.style.display = "block";
         changeIcon = true;
     }
 });

@@ -1,12 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
 <head>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script defer src="/js/testimonials.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/styleAbout.css" />
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/styleOffers.css">
+
+
+
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Despre</title>
+    <script src="https://kit.fontawesome.com/08626bfbba.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-<h1>PAGINA DESPRE</h1>
 
+<div>
+    <header class=menu>
+        <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="overlay">
+
+        </div>
+        <div class="container">
+            <nav>
+                <div>
+                    <h1 class="brand"><a href="#">Everyday</a></h1>
+                    <br>
+                    <h1 class="brand2"><a href="#"><span>Shisha</span></a></h1>
+
+                </div>
+
+                <ul>
+                    <li><a href="/">Acasa</a></li>
+                    <li><a href="/offers">Oferte</a></li>
+                    <li><a href="/gallery">Galerie</a></li>
+                    <li><a href="/about">Despre</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <video src="/content/shishavideo.mp4" muted loop autoplay></video>
+
+</div>
+<div id="cacat" class="showcase">
+    <div class="text">
+        <h2>narghileaua</h2>
+        <h2>preferata</h2>
+        <h3>chiar la tine acasa</h3>
+        <p>Comanda acum si venim in maxim 60 de minute!</p>
+        <a href="tel:0726261174" id="myLink">Inchiriaza</a>
+        <script>
+            (function(){
+                var link = document.getElementById("myLink");
+                function checkWidth() {
+                    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+                        newHref;
+                    if (width<640) {
+                        newHref="tel:0726261174";
+                    } else if (width<854) {
+                        newHref="tel:0726261174";
+                    } else {
+                        newHref="/offers";
+                    }
+                    link.href=newHref;
+                }
+                link.onclick = checkWidth;
+                checkWidth();
+            })();
+        </script>
+    </div>
+</div>
+
+<ul class="social" style="display: none;">
+
+    <li><a id="hide_instagram" href="#"><img src="/instagramicon.png"></a></li>
+    <li><a id="hide_snapchat" href="#"><img src="/snapchaticon.png"></a></li>
+    <li><a id="hide_facebook" href="#"><img src="/facebookicon.png"></a></li>
+    <li><a id="hide_whatsapp" href="#"><img src="/whatsappicon.png"></a></li>
+    <li><a id="hide_phone" href="#"><img src="/phoneicon.png"></a></li>
+
+</ul>
+
+<div id="hide_about" class="bg-light">
+    <div class="container py-5">
+        <div class="row h-100 align-items-center py-5">
+            <div class="col-lg-6">
+                <h1 class="display-4">Despre noi</h1>
+                <p class="lead text-muted mb-0">Create a minimal about us page using Bootstrap 4.</p>
+
+                </p>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block"><img src="/content/about/flavour_topview.png" style="width: 75%;" alt=""
+                                                         class="img-fluid"></div>
+        </div>
+    </div>
+</div>
+
+<div id="hide_testimonials" class="gtco-testimonials">
+    <div class="owl-carousel owl-carousel1 owl-theme">
+        <div>
+            <div class="card text-center"><img class="card-img-top"
+                                               src="https://images.unsplash.com/photo-1572561300743-2dd367ed0c9a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=300"
+                                               alt="">
+                <div class="card-body">
+                    <h5>Ronne Galle <br />
+                        <span> "Foarte satisfacut!" </span>
+                    </h5>
+                    <p class="card-text">“ Experiența cu Everyday Shisha a fost foarte plăcută. Site ul de unde am
+                        comandat este
+                        foarte intuitiv și
+                        usor de folosit ceea ce a contribuit la eficientă plasării comenzii.” </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="card text-center"><img class="card-img-top"
+                                               src="https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301"
+                                               alt="">
+                <div class="card-body">
+                    <h5>Missy Limana<br />
+                        <span> "Concept interesant" </span>
+                    </h5>
+                    <p class="card-text">“ Am fost plăcut impresionat de diversitatea de arome și oferte pe care le
+                        am întâlnit
+                        pe site. Este un conceput interesant și serviciul este bine pus la punct. ” </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="card text-center"><img class="card-img-top"
+                                               src="https://images.unsplash.com/photo-1575377222312-dd1a63a51638?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=302&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=302"
+                                               alt="">
+                <div class="card-body">
+                    <h5>Martha Brown<br />
+                        <span> "Recomand cu incredere" </span>
+                    </h5>
+                    <p class="card-text">“ Raportul calitate-preț este foarte bun. Nu am întâmpinat neplăceri cu
+                        narghileaua.
+                        Aromele au fost de calitate deoarece au avut miros și gust pregnant.” </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="card text-center"><img class="card-img-top"
+                                               src="https://images.unsplash.com/photo-1549836938-d278c5d46d20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=303"
+                                               alt="">
+                <div class="card-body">
+                    <h5>Hanna Lisem<br />
+                        <span>"Livrare rapida" </span>
+                    </h5>
+                    <p class="card-text">“ Timpul livrării a fost respectat, aproximativ 30 de minute.
+                        Recomand Everyday Shisha pentru toți oamenii care prefera sa fumeze o narghilea buna acasa.
+                        ” </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="hide_footer">
+    <div class="footer-bottom">
+        <p>Copyright &copy; 2020 Everyday Shisha. All Rights Reserved</p>
+    </div>
+</footer>
+
+<script src="/js/hamburgerToggleAbout.js"></script>
+<!--  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script> -->
 </body>
+
 </html>

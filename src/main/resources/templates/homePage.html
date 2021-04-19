@@ -28,7 +28,6 @@
                     <h1 class="brand"><a href="#">Everyday</a></h1>
                     <br>
                     <h1 class="brand2"><a href="#"><span>Shisha</span></a></h1>
-
                 </div>
 
                 <ul>
@@ -40,7 +39,6 @@
                 </ul>
             </nav>
         </div>
-
     </header>
     <video src="/content/shishavideo.mp4" muted loop autoplay></video>
 </div>
@@ -51,17 +49,33 @@
         <h2>preferata</h2>
         <h3>chiar la tine acasa</h3>
         <p>Comanda acum si venim in maxim 60 de minute!</p>
-        <a href="#">Inchiriaza</a>
+        <a href="tel:0726261174" id="myLink">Inchiriaza</a>
+        <script>
+            (function(){
+                var link = document.getElementById("myLink");
+                function checkWidth() {
+                    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+                        newHref;
+                    if (width<640) {
+                        newHref="tel:0726261174";
+                    } else if (width<854) {
+                        newHref="tel:0726261174";
+                    } else {
+                        newHref="/offers";
+                    }
+                    link.href=newHref;
+                }
+                link.onclick = checkWidth;
+                checkWidth();
+            })();
+        </script>
     </div>
 </div>
 <ul class="social">
 
-    <li><a id="hide_instagram" href="#"><img src="/content/instagramicon.png"></a></li>
-    <li><a id="hide_snapchat" href="#"><img src="/content/snapchaticon.png"></a></li>
-    <li><a id="hide_facebook" href="#"><img src="/content/facebookicon.png"></a></li>
-    <li><a id="hide_whatsapp" href="#"><img src="/content/whatsappicon.png"></a></li>
-    <li><a id="hide_phone" href="#"><img src="/content/phoneicon.png"></a></li>
-
+    <li><a id="hide_instagram" href="https://www.instagram.com/everyday.shisha.delivery/"><img src="/content/instagramicon.png"></a></li>
+    <li><a id="hide_whatsapp" href="https://wa.me/40726261174"><img src="/content/whatsappicon.png"></a></li>
+    <li><a id="hide_phone" href="tel:0726261174"><img src="/content/phoneicon.png"></a></li>
 </ul>
 
 <script src="/js/hamburgerToggle.js"></script>

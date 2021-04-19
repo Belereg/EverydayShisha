@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/css/styleOffers.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <!-- <link rel="stylesheet" type="text/css" href="/carousel.css"> -->
 
     <meta charset="UTF-8">
@@ -36,7 +37,6 @@
                     <li><a href="/offers">Oferte</a></li>
                     <li><a href="/gallery">Galerie</a></li>
                     <li><a href="/about">Despre</a></li>
-                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -52,39 +52,67 @@
         <h3>chiar la tine acasa</h3>
         <p>Comanda acum si venim in maxim 60 de minute!</p>
         <a href="#">Inchiriaza</a>
-    </div></div>
+        <script>
+            (function(){
+                var link = document.getElementById("myLink");
+                function checkWidth() {
+                    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+                        newHref;
+                    if (width<640) {
+                        newHref="tel:0726261174";
+                    } else if (width<854) {
+                        newHref="tel:0726261174";
+                    } else {
+                        newHref="/offers";
+                    }
+                    link.href=newHref;
+                }
+                link.onclick = checkWidth;
+                checkWidth();
+            })();
+        </script>
+    </div>
+</div>
 
 
 <ul class="social" style="display: none;">
 
-    <li><a id="hide_instagram" href="#"><img src="/content/instagramicon.png"></a></li>
-    <li><a id="hide_snapchat" href="#"><img src="/content/snapchaticon.png"></a></li>
-    <li><a id="hide_facebook" href="#"><img src="/content/facebookicon.png"></a></li>
-    <li><a id="hide_whatsapp" href="#"><img src="/content/whatsappicon.png"></a></li>
-    <li><a id="hide_phone" href="#"><img src="/content/phoneicon.png"></a></li>
+    <li><a id="hide_instagram" href="https://www.instagram.com/everyday.shisha.delivery/"><img src="/content/instagramicon.png"></a></li>
+    <li><a id="hide_whatsapp" href="https://wa.me/40726261174"><img src="/content/whatsappicon.png"></a></li>
+    <li><a id="hide_phone" href="tel:0726261174"><img src="/content/phoneicon.png"></a></li>
 
 </ul>
 
 
-
-
-
-<div id = "hide_content" class="container marketing" style="max-width: 1140px;">
+<div id="hide_content" class="container marketing" style="max-width: 1140px;">
     <div class="row">
         <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle"
+                 src="/content/offers/testimonial_photo_1.jpg"
+                 alt="Generic placeholder image" width="140" height="140">
             <h2>Heading</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p>Experiența cu Everyday Shisha a fost foarte plăcută. Site ul de unde am comandat este foarte intuitiv și
+                usor de folosit ceea ce a contribuit la eficientă plasării comenzii.
+                Timpul livrării a fost respectat, aproximativ 30 de minute.
+                Recomand Everyday Shisha pentru toți oamenii care prefera sa fumeze o narghilea buna acasa.</p>
         </div>
         <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle"
+                 src="/content/offers/testimonial_photo_2.jpg"
+                 alt="Generic placeholder image" width="140" height="140">
             <h2>Heading</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p>Am fost plăcut impresionat de diversitatea de arome și oferte pe care le am întâlnit pe site. Este un
+                conceput interesant și serviciul este bine pus la punct. Narghileaua este de calitate ceea ce a adus un
+                plus valoare atunci când am fumat cu prietenii mei.</p>
         </div>
         <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle"
+                 src="/content/offers/testimonial_photo_3.jpg"
+                 alt="Generic placeholder image" width="140" height="140">
             <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p>Raportul calitate-preț este foarte bun. Nu am întâmpinat neplăceri cu narghileaua. Aromele au fost de
+                calitate deoarece au avut miros și gust pregnant. Site ul de unde am comandat a fost usor de folosit și
+                ofertele foarte avantajoase.</p>
         </div>
     </div>
 
@@ -93,11 +121,17 @@
 
     <div class="row featurette">
         <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">First featurette heading. <span
+                    class="text-muted">It'll blow your mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+                semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+                commodo.</p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_178bcba203a%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_178bcba203a%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.1171875%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+                 style="width: 750px; height: 400px;"
+                 src="/content/offers/multiple_shishas.jpg"
+                 data-holder-rendered="true">
         </div>
     </div>
 
@@ -105,11 +139,16 @@
 
     <div class="row featurette">
         <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span>
+            </h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+                semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+                commodo.</p>
         </div>
         <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_178bcba203b%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_178bcba203b%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.1171875%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 500px; height: 500px;">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+                 src="/content/offers/hot_coal_2.jpg"
+                 data-holder-rendered="true" style="width: 750px; height: 400px;">
         </div>
     </div>
 
@@ -118,19 +157,27 @@
     <div class="row featurette">
         <div class="col-md-7">
             <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+                semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+                commodo.</p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_178bcba203c%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_178bcba203c%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.1171875%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 500px; height: 500px;">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+                 src="/content/offers/flavour_photo.jpg"
+                 data-holder-rendered="true" style="width: 750px; height: 400px;">
         </div>
     </div>
 
     <hr class="featurette-divider">
 
-</div>>
+</div>
 
 
-
+<footer id="hide_footer">
+    <div class="footer-bottom">
+        <p>Copyright &copy; 2020 Everyday Shisha. All Rights Reserved</p>
+    </div>
+</footer>
 
 <script src="/js/hamburgerToggleOffers.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

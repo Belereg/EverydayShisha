@@ -15,7 +15,10 @@ h2.featurette-heading{
 }
 
 body {
-    padding-bottom: 3rem;
+    /*padding-bottom: 3rem;*/
+}
+p {
+    margin:0;
 }
 .marketing .col-lg-4 {
     margin-bottom: 1.5rem;

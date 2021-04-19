@@ -6,6 +6,7 @@
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/css/styleGallery.css">
     <link rel="stylesheet" type="text/css" href="/css/styleProducts.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,22 +40,39 @@
                     <li><a href="/offers">Oferte</a></li>
                     <li><a href="/gallery">Galerie</a></li>
                     <li><a href="/about">Despre</a></li>
-                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
-
     </header>
     <video src="/content/shishavideo.mp4" muted loop autoplay></video>
 </div>
 
 <div id="cacat" class="showcase">
     <div class="text">
-        <h2>narghileaua</h2>
+        <h2>Narghileaua</h2>
         <h2>preferata</h2>
         <h3>chiar la tine acasa</h3>
         <p>Comanda acum si venim in maxim 60 de minute!</p>
-        <a href="#">Inchiriaza</a>
+        <a  href="tel:0726261174" id="myLink">Inchiriaza</a>
+        <script>
+            (function(){
+                var link = document.getElementById("myLink");
+                function checkWidth() {
+                    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+                        newHref;
+                    if (width<640) {
+                        newHref="tel:0726261174";
+                    } else if (width<854) {
+                        newHref="tel:0726261174";
+                    } else {
+                        newHref="/offers";
+                    }
+                    link.href=newHref;
+                }
+                link.onclick = checkWidth;
+                checkWidth();
+            })();
+        </script>
     </div>
 </div>
 
@@ -64,36 +82,36 @@
             <div id="firstOne" class="card mr-2">
                 <div class="d-flex flex-column thumbnails">
                     <div id="g1" class="tb tb-active">
-                        <img class="thumbnail-img fit-image" src=""/>
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha1_1.jpg"/>
                     </div>
                     <div id="g2" class="tb">
-                        <img class="thumbnail-img fit-image" src=""/>
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha1_2.jpg"/>
                     </div>
                     <div id="g3" class="tb">
-                        <img class="thumbnail-img fit-image" src=""/>
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha1_3.jpg"/>
                     </div>
                     <div id="g4" class="tb">
-                        <img class="thumbnail-img fit-image" src=""/>
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha1_4.jpg"/>
                     </div>
                 </div>
                 <fieldset id="g11" class="active">
                     <div class="product-pic">
-                        <img class="pic0" src=""/>
+                        <img class="pic0" src="/content/gallery/shisha1_1.jpg"/>
                     </div>
                 </fieldset>
                 <fieldset id="g21" class="">
                     <div class="product-pic">
-                        <img class="pic0" src=""/>
+                        <img class="pic0" src="/content/gallery/shisha1_2.jpg"/>
                     </div>
                 </fieldset>
                 <fieldset id="g31" class="">
                     <div class="product-pic">
-                        <img class="pic0" src=""/>
+                        <img class="pic0" src="/content/gallery/shisha1_3.jpg"/>
                     </div>
                 </fieldset>
                 <fieldset id="g41" class="">
                     <div class="product-pic">
-                        <img class="pic0" src=""/>
+                        <img class="pic0" src="/content/gallery/shisha1_4.jpg"/>
                     </div>
                 </fieldset>
             </div>
@@ -103,36 +121,36 @@
             <div id="secondOne" class="card mr-2">
                 <div class="d-flex flex-column thumbnails">
                     <div id="f1" class="tb tb-active">
-                        <img class="thumbnail-img fit-image" src=""/>
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha2_1.jpg"/>
                     </div>
                     <div id="f2" class="tb">
-                        <img class="thumbnail-img fit-image" src=""/>
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha2_2.jpg"/>
                     </div>
                     <div id="f3" class="tb">
-                        <img class="thumbnail-img fit-image" src=""/>
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha2_3.jpg"/>
                     </div>
                     <div id="f4" class="tb">
-                        <img class="thumbnail-img fit-image" src=""/>
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha2_4.jpg"/>
                     </div>
                 </div>
                 <fieldset id="f11" class="active">
                     <div class="product-pic">
-                        <img class="pic0" src=""/>
+                        <img class="pic0" src="/content/gallery/shisha2_1.jpg"/>
                     </div>
                 </fieldset>
                 <fieldset id="f21" class="">
                     <div class="product-pic">
-                        <img class="pic0" src=""/>
+                        <img class="pic0" src="/content/gallery/shisha2_2.jpg"/>
                     </div>
                 </fieldset>
                 <fieldset id="f31" class="">
                     <div class="product-pic">
-                        <img class="pic0" src=""/>
+                        <img class="pic0" src="/content/gallery/shisha2_3.jpg"/>
                     </div>
                 </fieldset>
                 <fieldset id="f41" class="">
                     <div class="product-pic">
-                        <img class="pic0" src=""/>
+                        <img class="pic0" src="/content/gallery/shisha2_4.jpg"/>
                     </div>
                 </fieldset>
             </div>
@@ -142,42 +160,211 @@
             <div id="thirdOne" class="card mr-2">
                 <div class="d-flex flex-column thumbnails">
                     <div id="h1" class="tb tb-active">
-                        <img class="thumbnail-img fit-image" src=""/>
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha3_1.jpg"/>
                     </div>
                     <div id="h2" class="tb">
-                        <img class="thumbnail-img fit-image" src=""/>
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha3_2.jpg"/>
                     </div>
                     <div id="h3" class="tb">
-                        <img class="thumbnail-img fit-image" src=""/>
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha3_3.jpg"/>
                     </div>
                     <div id="h4" class="tb">
-                        <img class="thumbnail-img fit-image" src=""/>
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha3_4.jpg"/>
                     </div>
                 </div>
                 <fieldset id="h11" class="active">
                     <div class="product-pic">
-                        <img class="pic0" src=""/>
+                        <img class="pic0" src="/content/gallery/shisha3_1.jpg"/>
                     </div>
                 </fieldset>
                 <fieldset id="h21" class="">
                     <div class="product-pic">
-                        <img class="pic0" src=""/>
+                        <img class="pic0" src="/content/gallery/shisha3_2.jpg"/>
                     </div>
                 </fieldset>
                 <fieldset id="h31" class="">
                     <div class="product-pic">
-                        <img class="pic0" src=""/>
+                        <img class="pic0" src="/content/gallery/shisha3_3.jpg"/>
                     </div>
                 </fieldset>
                 <fieldset id="h41" class="">
                     <div class="product-pic">
-                        <img class="pic0" src=""/>
+                        <img class="pic0" src="/content/gallery/shisha3_4.jpg"/>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div id="forthOne" class="card mr-2">
+                <div class="d-flex flex-column thumbnails">
+                    <div id="i1" class="tb tb-active">
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha4_1.jpg"/>
+                    </div>
+                    <div id="i2" class="tb">
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha4_2.jpg"/>
+                    </div>
+                    <div id="i3" class="tb">
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha4_3.jpg"/>
+                    </div>
+                </div>
+                <fieldset id="i11" class="active">
+                    <div class="product-pic">
+                        <img class="pic0" src="/content/gallery/shisha4_1.jpg"/>
+                    </div>
+                </fieldset>
+                <fieldset id="i21" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src="/content/gallery/shisha4_2.jpg"/>
+                    </div>
+                </fieldset>
+                <fieldset id="i31" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src="/content/gallery/shisha4_3.jpg"/>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div id="fifthOne" class="card mr-2">
+                <div class="d-flex flex-column thumbnails">
+                    <div id="j1" class="tb tb-active">
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha5_1.jpg"/>
+                    </div>
+                    <div id="j2" class="tb">
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha5_2.jpg"/>
+                    </div>
+                    <div id="j3" class="tb">
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha5_3.jpg"/>
+                    </div>
+                    <div id="j4" class="tb">
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha5_4.jpg"/>
+                    </div>
+                </div>
+                <fieldset id="j11" class="active">
+                    <div class="product-pic">
+                        <img class="pic0" src="/content/gallery/shisha5_1.jpg"/>
+                    </div>
+                </fieldset>
+                <fieldset id="j21" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src="/content/gallery/shisha5_2.jpg"/>
+                    </div>
+                </fieldset>
+                <fieldset id="j31" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src="/content/gallery/shisha5_3.jpg"/>
+                    </div>
+                </fieldset>
+                <fieldset id="j41" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src="/content/gallery/shisha5_4.jpg"/>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div id="sixthOne" class="card mr-2">
+                <div class="d-flex flex-column thumbnails">
+                    <div id="k1" class="tb tb-active">
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha6_1.jpg"/>
+                    </div>
+                    <div id="k2" class="tb">
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha6_2.jpg"/>
+                    </div>
+                    <div id="k3" class="tb">
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha6_3.jpg"/>
+                    </div>
+                    <div id="k4" class="tb">
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha6_4.jpg"/>
+                    </div>
+                </div>
+                <fieldset id="k11" class="active">
+                    <div class="product-pic">
+                        <img class="pic0" src="/content/gallery/shisha6_1.jpg"/>
+                    </div>
+                </fieldset>
+                <fieldset id="k21" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src="/content/gallery/shisha6_2.jpg"/>
+                    </div>
+                </fieldset>
+                <fieldset id="k31" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src="/content/gallery/shisha6_3.jpg"/>
+                    </div>
+                </fieldset>
+                <fieldset id="k41" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src="/content/gallery/shisha6_4.jpg"/>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div id="seventhOne" class="card mr-2">
+                <div class="d-flex flex-column thumbnails">
+                    <div id="l1" class="tb tb-active">
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha7_3.jpg"/>
+                    </div>
+                    <div id="l2" class="tb">
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha7_2.jpg"/>
+                    </div>
+                    <div id="l3" class="tb">
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha7_1.jpg"/>
+                    </div>
+                    <div id="l4" class="tb">
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha7_4.jpg"/>
+                    </div>
+                </div>
+                <fieldset id="l11" class="active">
+                    <div class="product-pic">
+                        <img class="pic0" src="/content/gallery/shisha7_3.jpg"/>
+                    </div>
+                </fieldset>
+                <fieldset id="l21" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src="/content/gallery/shisha7_2.jpg"/>
+                    </div>
+                </fieldset>
+                <fieldset id="l31" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src="/content/gallery/shisha7_1.jpg"/>
+                    </div>
+                </fieldset>
+                <fieldset id="l41" class="">
+                    <div class="product-pic">
+                        <img class="pic0" src="/content/gallery/shisha7_4.jpg"/>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div id="eighthOne" class="card mr-2">
+                <div class="d-flex flex-column thumbnails">
+                    <div id="m1" class="tb tb-active">
+                        <img class="thumbnail-img fit-image" src="/content/gallery/shisha8_1.jpg"/>
+                    </div>
+                </div>
+                <fieldset id="m11" class="active">
+                    <div class="product-pic">
+                        <img class="pic0" src="/content/gallery/shisha8_1.jpg"/>
                     </div>
                 </fieldset>
             </div>
         </div>
     </div>
 </div>
+
+<footer id="hide_footer">
+    <div class="footer-bottom">
+        <p>Copyright &copy; 2020 Everyday Shisha. All Rights Reserved</p>
+    </div>
+</footer>
 
 <script src="/js/products.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
