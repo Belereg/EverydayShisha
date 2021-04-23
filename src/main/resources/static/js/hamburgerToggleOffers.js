@@ -3,7 +3,9 @@ var changeIcon = true;
 var cacat = document.getElementById("cacat")
 var hide_content = document.getElementById("hide_content")
 var hide_footer = document.getElementById("hide_footer")
+var hide_pricings = document.getElementById("hide_pricings")
 
+hide_pricings
 open.addEventListener("click", function(){
 
     var overlay = document.querySelector('.overlay');
@@ -18,6 +20,7 @@ open.addEventListener("click", function(){
         cacat.style.display = "none";
         hide_content.style.display = "none";
         hide_footer.style.display = "none";
+        hide_pricings.style.display = "none";
         changeIcon = false;
     }
     else {
@@ -26,6 +29,7 @@ open.addEventListener("click", function(){
         cacat.style.display = "flex";
         hide_content.style.display = "inline-block";
         hide_footer.style.display = "block";
+        hide_pricings.style.display = "inline-block";
         changeIcon = true;
     }
 });

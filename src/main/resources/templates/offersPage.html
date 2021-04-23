@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/stylePricing.css">
     <link rel="stylesheet" type="text/css" href="/css/styleOffers.css">
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <!-- <link rel="stylesheet" type="text/css" href="/carousel.css"> -->
@@ -51,22 +52,24 @@
         <h2>preferata</h2>
         <h3>chiar la tine acasa</h3>
         <p>Comanda acum si venim in maxim 60 de minute!</p>
-        <a href="#">Inchiriaza</a>
+        <a id="myLink">Inchiriaza</a>
         <script>
-            (function(){
+            (function () {
                 var link = document.getElementById("myLink");
+
                 function checkWidth() {
                     var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
                         newHref;
-                    if (width<640) {
-                        newHref="tel:0726261174";
-                    } else if (width<854) {
-                        newHref="tel:0726261174";
+                    if (width < 640) {
+                        newHref = "tel:0726261174";
+                    } else if (width < 854) {
+                        newHref = "tel:0726261174";
                     } else {
-                        newHref="/offers";
+                        newHref = "https://wa.me/40726261174";
                     }
-                    link.href=newHref;
+                    link.href = newHref;
                 }
+
                 link.onclick = checkWidth;
                 checkWidth();
             })();
@@ -77,60 +80,144 @@
 
 <ul class="social" style="display: none;">
 
-    <li><a id="hide_instagram" href="https://www.instagram.com/everyday.shisha.delivery/"><img src="/content/instagramicon.png"></a></li>
+    <li><a id="hide_instagram" href="https://www.instagram.com/everyday.shisha.delivery/"><img
+            src="/content/instagramicon.png"></a></li>
     <li><a id="hide_whatsapp" href="https://wa.me/40726261174"><img src="/content/whatsappicon.png"></a></li>
     <li><a id="hide_phone" href="tel:0726261174"><img src="/content/phoneicon.png"></a></li>
 
 </ul>
 
 
-<div id="hide_content" class="container marketing" style="max-width: 1140px;">
+
+<div id="hide_pricings" class="container">
+    <h5 class="text-center pricing-table-subtitle">Everyday Shisha</h5>
+    <h1 class="text-center pricing-table-title">Oferte</h1>
     <div class="row">
-        <div class="col-lg-4">
-            <img class="rounded-circle"
-                 src="/content/offers/testimonial_photo_1.jpg"
-                 alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Experiența cu Everyday Shisha a fost foarte plăcută. Site ul de unde am comandat este foarte intuitiv și
-                usor de folosit ceea ce a contribuit la eficientă plasării comenzii.
-                Timpul livrării a fost respectat, aproximativ 30 de minute.
-                Recomand Everyday Shisha pentru toți oamenii care prefera sa fumeze o narghilea buna acasa.</p>
+        <div class="col-md-4">
+            <div class="card pricing-card pricing-plan-basic">
+                <div class="card-body">
+                    <i class="mdi mdi-cube-outline pricing-plan-icon"></i>
+                    <p class="pricing-plan-title">Newbie smokah'</p>
+                    <h3 class="pricing-plan-cost ml-auto">60 lei</h3>
+                    <ul class="pricing-plan-features">
+                        <li>&#x2713; &nbsp; 1 narghilea Everyday Shisha</li>
+                        <li>&#x2713; &nbsp; 2 aroma la alegere</li>
+                        <li>&#x2713; &nbsp; 9 carbuni din coaja de nuca de cocos </li>
+                    </ul>
+                    <a href="tel:0726261174" id="myLink1" class="btn pricing-plan-purchase-btn">Inchirieaza</a>
+                    <script>
+                        (function(){
+                            var link = document.getElementById("myLink1");
+                            function checkWidth() {
+                                var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+                                    newHref;
+                                if (width<640) {
+                                    newHref="tel:0726261174";
+                                } else if (width<854) {
+                                    newHref="tel:0726261174";
+                                } else {
+                                    newHref="https://wa.me/40726261174";
+                                }
+                                link.href=newHref;
+                            }
+                            link.onclick = checkWidth;
+                            checkWidth();
+                        })();
+                    </script>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-4">
-            <img class="rounded-circle"
-                 src="/content/offers/testimonial_photo_2.jpg"
-                 alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Am fost plăcut impresionat de diversitatea de arome și oferte pe care le am întâlnit pe site. Este un
-                conceput interesant și serviciul este bine pus la punct. Narghileaua este de calitate ceea ce a adus un
-                plus valoare atunci când am fumat cu prietenii mei.</p>
+        <div class="col-md-4">
+            <div class="card pricing-card pricing-card-highlighted  pricing-plan-pro">
+                <div class="card-body">
+                    <i class="mdi mdi-trophy pricing-plan-icon"></i>
+                    <p class="pricing-plan-title">Double trouble $hi$ha</p>
+                    <h3 class="pricing-plan-cost ml-auto">110 lei</h3>
+                    <ul class="pricing-plan-features">
+                        <li>&#x2713; &nbsp; 2 narghilele Everyday Shisha</li>
+                        <li>&#x2713; &nbsp; 4 aroma la alegere + 1 aroma din partea casei</li>
+                        <li>&#x2713; &nbsp; 18 carbuni din coaja de nuca de cocos </li>
+                    </ul>
+                    <a href="tel:0726261174" id="myLink2" class="btn pricing-plan-purchase-btn">Inchirieaza</a>
+                    <script>
+                        (function(){
+                            var link = document.getElementById("myLink2");
+                            function checkWidth() {
+                                var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+                                    newHref;
+                                if (width<640) {
+                                    newHref="tel:0726261174";
+                                } else if (width<854) {
+                                    newHref="tel:0726261174";
+                                } else {
+                                    newHref="https://wa.me/40726261174";
+                                }
+                                link.href=newHref;
+                            }
+                            link.onclick = checkWidth;
+                            checkWidth();
+                        })();
+                    </script>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-4">
-            <img class="rounded-circle"
-                 src="/content/offers/testimonial_photo_3.jpg"
-                 alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Raportul calitate-preț este foarte bun. Nu am întâmpinat neplăceri cu narghileaua. Aromele au fost de
-                calitate deoarece au avut miros și gust pregnant. Site ul de unde am comandat a fost usor de folosit și
-                ofertele foarte avantajoase.</p>
+        <div class="col-md-4">
+            <div class="card pricing-card pricing-plan-enterprise">
+                <div class="card-body">
+                    <i class="mdi mdi-wallet-giftcard pricing-plan-icon"></i>
+                    <p class="pricing-plan-title">Shisha king</p>
+                    <h3 class="pricing-plan-cost ml-auto">160 lei</h3>
+                    <ul class="pricing-plan-features">
+                        <li>&#x2713; &nbsp; 3 narghilele Everyday Shisha</li>
+                        <li>&#x2713; &nbsp; 6 aroma la alegere + 2 arome din partea casei</li>
+                        <li>&#x2713; &nbsp; 27 carbuni din coaja de nuca de cocos</li>
+                    </ul>
+                    <a href="tel:0726261174" id="myLink3" class="btn pricing-plan-purchase-btn">Inchirieaza</a>
+                    <script>
+                        (function(){
+                            var link = document.getElementById("myLink3");
+                            function checkWidth() {
+                                var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+                                    newHref;
+                                if (width<640) {
+                                    newHref="tel:0726261174";
+                                } else if (width<854) {
+                                    newHref="tel:0726261174";
+                                } else {
+                                    newHref="https://wa.me/40726261174";
+                                }
+                                link.href=newHref;
+                            }
+                            link.onclick = checkWidth;
+                            checkWidth();
+                        })();
+                    </script>
+                </div>
+            </div>
         </div>
     </div>
+</div>
 
 
+
+<div id="hide_content" class="container marketing" style="max-width: 1140px;">
     <hr class="featurette-divider">
 
     <div class="row featurette">
         <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span
-                    class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-                semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-                commodo.</p>
+
+            <h2 class="featurette-heading">Narghileaua ta preferata.<span
+                    class="text-muted">&nbsp;Cea mai inalta calitate</span></h2>
+            <br>
+            <p class="lead">Everyday Shisha prepara și personalizează fiecare narghilea pe care o livrează. Tot ce
+                trebuie sa faci este sa alegi mărimea narghilelei, cele doua arome și locația unde te afli iar noi ne
+                ocupam de restul. Site-ul nostru iti oferă acces rapid și eficient la toate ofertele noastre, fara sa
+                fii nevoit sa ieși din casa. Alege-ti narghileaua acum!</p>
         </div>
         <div class="col-md-5">
             <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
                  style="width: 750px; height: 400px;"
-                 src="/content/offers/multiple_shishas.jpg"
+                 src="/content/offers/multiple_shishas.png"
                  data-holder-rendered="true">
         </div>
     </div>
@@ -139,15 +226,16 @@
 
     <div class="row featurette">
         <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span>
+            <h2 class="featurette-heading">Carbunii chiar conteaza? <span class="text-muted">Absolut!</span>
             </h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-                semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-                commodo.</p>
+            <br>
+            <p class="lead">Noi folosim cărbuni de cea mai buna calitate, obținuți din coaja de nuca de cocos. Aceștia
+                prezintă o ardere îndelungată (pana la o ora și jumătate), fără gust sau miros neplacut, reușind astfel
+                sa intensifice plăcerea de a fuma o narghilea de calitate.</p>
         </div>
         <div class="col-md-5 order-md-1">
             <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
-                 src="/content/offers/hot_coal_2.jpg"
+                 src="/content/offers/hot_coal_2.png"
                  data-holder-rendered="true" style="width: 750px; height: 400px;">
         </div>
     </div>
@@ -156,14 +244,15 @@
 
     <div class="row featurette">
         <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-                semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-                commodo.</p>
+            <h2 class="featurette-heading">Arome de toate tipurile!</h2>
+            <br>
+            <p class="lead">Everyday Shisha folosește o gama variata de arome, reușind astfel sa satisfacem toate
+                preferințele clienților. De la arome cu tutun și nicotina, pana la arome 100% naturale, noi acoperim
+                toate gusturile posibile: arome mentolate, fructate, chiar și combinații personalizate.</p>
         </div>
         <div class="col-md-5">
             <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
-                 src="/content/offers/flavour_photo.jpg"
+                 src="/content/offers/flavour_photo.png"
                  data-holder-rendered="true" style="width: 750px; height: 400px;">
         </div>
     </div>
