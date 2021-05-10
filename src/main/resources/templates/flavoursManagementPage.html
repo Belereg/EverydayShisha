@@ -23,9 +23,9 @@
     </thead>
     <tbody>
     <tr th:each="flavour : ${flavours}">
-      <td th:text="${flavour.idFlavour}">Flavour Id</td>
+      <td th:text="${flavour.idFlavour + '.'}">Flavour Id</td>
       <td th:text="${flavour.flavourName}">Flavour name</td>
-      <td th:text="${flavour.amount}">Amount</td>
+      <td th:text="${flavour.amount + 'g'}">Amount</td>
 
       <td>
         <a th:href="@{'/flavours/updateFlavour/' + ${flavour.idFlavour}}">Edit</a>

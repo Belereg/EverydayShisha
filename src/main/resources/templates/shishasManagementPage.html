@@ -24,9 +24,9 @@
     </thead>
     <tbody>
     <tr th:each="shisha : ${shishas}">
-      <td th:text="${shisha.idShisha}">Shisha Id</td>
+      <td th:text="${shisha.idShisha + '.'}">Shisha Id</td>
       <td th:text="${shisha.shishaName}">Shisha name</td>
-      <td th:text="${shisha.size}">Size</td>
+      <td th:text="${shisha.size + ' cm'}">Size</td>
       <td th:text="${shisha.hoseCount}">Hose count</td>
 
       <td>

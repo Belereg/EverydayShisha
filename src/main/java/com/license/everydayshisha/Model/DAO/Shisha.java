@@ -16,7 +16,7 @@ public class Shisha {
 
     @NotBlank
     @Size(min = 2, message = "Shisha name must have at least 2 characters")
-    @Pattern(regexp = "[a-zA-Z \\p{Punct}]+", message = "Shisha name can only contain letters")
+    @Pattern(regexp = "[a-zA-Z0-9 \\p{Punct}]+", message = "Shisha name can only contain letters")
     @Column(name = "shishaName")
     private String shishaName;
 
