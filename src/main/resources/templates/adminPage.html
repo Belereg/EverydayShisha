@@ -4,15 +4,50 @@
 <head>
     <meta charset="utf-8"/>
     <title>Admin Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/stylePricing.css">
 </head>
 <body>
-<h1>Admin Page</h1>
-<a href="/clients/clientsManagement">Clients management</a><br>
-<a href="/flavours/flavoursManagement">Flavours management</a><br>
-<a href="/shishas/shishasManagement">Shishas management</a><br>
-<br/><br/>
-<a href="/logout">Sign out</a><br>
 
+<div id="hide_pricings" class="container">
+    <h5 class="text-center pricing-table-subtitle">Administrator page</h5>
+    <h1 class="text-center pricing-table-title">Everyday Shisha</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card pricing-card pricing-plan-enterprise4">
+                <div class="card-body">
+                    <h4 class="pricing-plan-cost ml-auto" style="font-size: 30px">Clients</h4>
+                    <a href="/clients/clientsManagement" class="btn pricing-plan-purchase-btn">Manage</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card pricing-card pricing-plan-enterprise3">
+                <div class="card-body">
+                    <h4 class="pricing-plan-cost ml-auto" style="font-size: 30px">Flavours</h4>
+                    <a href="/flavours/flavoursManagement" class="btn pricing-plan-purchase-btn">Manage</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card pricing-card pricing-plan-enterprise2">
+                <div class="card-body">
+                    <h4 class="pricing-plan-cost ml-auto" style="font-size: 30px">Shishas</h4>
+                    <a href="/shishas/shishasManagement" class="btn pricing-plan-purchase-btn">Manage</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card pricing-card pricing-plan-enterprise">
+                <div class="card-body">
+                    <h4 class="pricing-plan-cost ml-auto" style="font-size: 30px">Exit</h4>
+                    <a href="/logout" class="btn pricing-plan-purchase-btn">Sign out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

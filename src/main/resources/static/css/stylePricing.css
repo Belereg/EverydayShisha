@@ -110,3 +110,33 @@ body {
     transform: translateY(3px);
     box-shadow: none; }
 
+.pricing-plan-enterprise2 .pricing-plan-purchase-btn {
+    background-color: #0073ff;
+    color: #fff; }
+.pricing-plan-enterprise2 .pricing-plan-purchase-btn:hover {
+    box-shadow: 0 3px 0 0 #002a81; }
+.pricing-plan-enterprise2 .pricing-plan-purchase-btn:active {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    box-shadow: none; }
+
+.pricing-plan-enterprise3 .pricing-plan-purchase-btn {
+    background-color: #6100ff;
+    color: #fff; }
+.pricing-plan-enterprise3 .pricing-plan-purchase-btn:hover {
+    box-shadow: 0 3px 0 0 #320060; }
+.pricing-plan-enterprise3 .pricing-plan-purchase-btn:active {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    box-shadow: none; }
+
+.pricing-plan-enterprise4 .pricing-plan-purchase-btn {
+    background-color: #3ba900;
+    color: #fff; }
+.pricing-plan-enterprise4 .pricing-plan-purchase-btn:hover {
+    box-shadow: 0 3px 0 0 #125100; }
+.pricing-plan-enterprise4 .pricing-plan-purchase-btn:active {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    box-shadow: none; }
+
