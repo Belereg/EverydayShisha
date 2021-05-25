@@ -4,15 +4,17 @@
 <head>
     <meta charset="utf-8"/>
     <title>Clients Management</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 <body>
-
-<a href="/admin">Go back to admin page</a>
+<br>
+<a class="btn btn-primary" style="margin-left:25px;" href="/admin">Go back to admin page</a>
 <div align="center">
     <h1>Clients List</h1>
-    <a href="/clients/saveClientPage">Add New Client</a>
+    <a class="btn btn-primary" href="/clients/saveClientPage" role="button">Add New Client</a>
     <br/><br/>
-    <table border="1" cellpadding="10">
+    <table class="table table-striped">
         <thead>
         <tr>
             <th>Client ID</th>
@@ -25,7 +27,6 @@
         </tr>
         </thead>
         <tbody>
-
         <tr th:each="client : ${clients}">
             <td th:text="${client.idCLient + '.'}">Client ID</td>
             <td th:text="${client.firstName}">First Name</td>
@@ -34,13 +35,17 @@
             <td th:text="${client.address}">Address</td>
             <td th:text="${client.phoneNumber}">Phone Number</td>
             <td>
-                <a th:href="@{'/clients/updateClient/' + ${client.idCLient}}">Edit</a>
-                &nbsp;&nbsp;&nbsp;
-                <a th:href="@{'/clients/deleteClient/' + ${client.idCLient}}">Delete</a>
+                <a class="btn btn-primary" th:href="@{'/clients/updateClient/' + ${client.idCLient}}"
+                   role="button">Edit</a>
+                &nbsp;
+                <a class="btn btn-primary" style="background-color: #ff3a3a; border-color: #ff3a3a"
+                   th:href="@{'/clients/deleteClient/' + ${client.idCLient}}" role="button">Delete</a>
             </td>
         </tr>
         </tbody>
     </table>
 </div>
+
+
 </body>
 </html>

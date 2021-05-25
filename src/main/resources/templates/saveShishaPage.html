@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Add a shisha </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 <body>
-<a href="/shishas/shishasManagement">Go back to shishas management page</a>
+<br>
+<a class="btn btn-primary" style="margin-left:25px;" href="/shishas/shishasManagement">Go back to shishas management
+    page</a>
 <div align="center">
     <h1>Add a shisha below</h1>
     <br/>
@@ -18,17 +22,19 @@
                 <td th:if="${#fields.hasErrors('shishaName')}" th:errors="*{shishaName}" class="">shishaName error</td>
             </tr>
             <tr>
-                <td>Shisha's size </td>
+                <td>Shisha's size</td>
                 <td><input type="text" th:field="*{size}"/></td>
                 <td th:if="${#fields.hasErrors('size')}" th:errors="*{size}" class="">size error</td>
             </tr>
             <tr>
-                <td>Shisha's hose count </td>
+                <td>Shisha's hose count</td>
                 <td><input type="text" th:field="*{hoseCount}"/></td>
                 <td th:if="${#fields.hasErrors('hoseCount')}" th:errors="*{hoseCount}" class="">hoseCount error</td>
             </tr>
             <tr>
-                <td colspan="2"><button type="submit">Save shisha</button></td>
+                <td colspan="2">
+                    <button type="submit" class="btn btn-success">Save shisha</button>
+                </td>
             </tr>
         </table>
     </form>

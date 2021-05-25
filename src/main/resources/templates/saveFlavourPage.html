@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Add a flavour </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 <body>
-<a href="/flavours/flavoursManagement">Go back to flavours management page</a>
+<br>
+<a class="btn btn-primary" style="margin-left:25px;" href="/flavours/flavoursManagement">Go back to flavours management
+    page</a>
 <div align="center">
     <h1>Add a flavour below</h1>
     <br/>
@@ -15,15 +19,18 @@
             <tr>
                 <td>Flavour's name:</td>
                 <td><input type="text" th:field="*{flavourName}"/></td>
-                <td th:if="${#fields.hasErrors('flavourName')}" th:errors="*{flavourName}" class="">flavourName error</td>
+                <td th:if="${#fields.hasErrors('flavourName')}" th:errors="*{flavourName}" class="">flavourName error
+                </td>
             </tr>
             <tr>
-                <td>Flavour amount: </td>
+                <td>Flavour amount:</td>
                 <td><input type="text" th:field="*{amount}"/></td>
                 <td th:if="${#fields.hasErrors('amount')}" th:errors="*{amount}" class="">amount error</td>
             </tr>
             <tr>
-                <td colspan="2"><button type="submit">Save flavour</button></td>
+                <td colspan="2">
+                    <button type="submit" class="btn btn-success">Save flavour</button>
+                </td>
             </tr>
         </table>
     </form>

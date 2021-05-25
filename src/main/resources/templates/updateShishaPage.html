@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Update a shisha </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 <body>
 <div align="center">
+    <br>
+    <br>
     <h1>Update the shisha's information below</h1>
     <br/>
     <form action="#" th:action="@{/shishas/saveShisha}" th:object="${shisha}" method="post">
@@ -28,7 +32,9 @@
                 <td><input type="text" th:field="*{hoseCount}"/></td>
             </tr>
             <tr>
-                <td colspan="2"><button type="submit">Update shisha</button></td>
+                <td colspan="2">
+                    <button class="btn btn-success" type="submit">Update shisha</button>
+                </td>
             </tr>
         </table>
     </form>
