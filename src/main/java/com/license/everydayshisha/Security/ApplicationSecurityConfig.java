@@ -45,13 +45,10 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                //.antMatchers("/*").hasAnyRole("ADMIN","USER")
-                //.antMatchers("/clients/*").permitAll()
                 .antMatchers("/admin").hasRole("ADMIN")
                 .antMatchers("/clients/*").hasAnyRole("ADMIN")
                 .antMatchers("/flavours/*").hasAnyRole("ADMIN")
                 .antMatchers("/shishas/*").hasAnyRole("ADMIN")
-                //.antMatchers("/clients/**").hasAnyRole("USER","ADMIN")
                 .and().formLogin()
                 .and()
                 .httpBasic();
